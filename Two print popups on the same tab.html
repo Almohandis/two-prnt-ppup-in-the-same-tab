@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <input type="button" name="" id="tt1" value="ok">
+    <div id="test1">Hello world 1</div>
+    <div id="test2">Hello world 2</div>
+
+    <script>
+        window.onload = function() {
+            r1 = test1.outerHTML;
+            r2 = test2.outerHTML;
+
+            function hello1() {
+                alert("الحمد لله")
+                var backwindow = window.open('', '_parent');
+                backwindow.document.write('<html><head></head><body>');
+                backwindow.document.write(r2);
+                backwindow.document.write('</body></html>');
+                backwindow.document.close();
+                backwindow.focus();
+                backwindow.focus();
+                backwindow.print();
+            }
+
+            tt1.onclick = function() {
+                var pwindow = window.open('', '_parent');
+                pwindow.document.write('<html><head></head><body>');
+                pwindow.document.write(r1);
+                pwindow.document.write('</body></html>');
+                pwindow.document.close();
+                pwindow.focus();
+                pwindow.print();
+                hello1();
+            }
+        }
+    </script>
+</body>
+
+</html>
